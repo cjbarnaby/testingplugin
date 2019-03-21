@@ -15,7 +15,8 @@
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 
+	var num;
 	document.addEventListener("DOMContentLoaded", function() {
-		var num = document.querySelector(".num");
+		num = document.querySelector(".num");
 
 	});
