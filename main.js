@@ -16,5 +16,6 @@
 	}(document, 'script', 'facebook-jssdk'));
 
 	document.addEventListener("DOMContentLoaded", function() {
-		console.log(document.querySelector("#num"));
+		var num = document.querySelector(".num");
+
 	});
