@@ -15,7 +15,8 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 var num;
+
 document.addEventListener("DOMContentLoaded", function() {
 	num = document.querySelector(".num").innerText;
-	console.log(num);
+	console.log(`num: ${num}`);
 });
