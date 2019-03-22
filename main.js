@@ -14,9 +14,11 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-var num;
+var surveyValue;
 
 document.addEventListener("DOMContentLoaded", function() {
-	num = document.querySelector(".num").innerText;
-	console.log(`num: ${num}`);
+	var fbChatDiv = document.querySelector(".fb-customerchat");
+	surveyValue = document.querySelector(".num").innerText;
+	fbChatDiv.setAttribute("ref", surveyValue); 
+	console.log(`num: ${surveyValue}`);
 });
