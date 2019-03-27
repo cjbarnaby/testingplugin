@@ -16,8 +16,22 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 document.addEventListener("DOMContentLoaded", function() {
-	var fbChatDiv = document.querySelector(".fb-customerchat");
+	var attributes = {
+		"attribution": "setup_tool",
+		"page_id": "1779324532358727",
+		"theme_color": "#00d1e9",
+		"logged_in_greeting": "Hi: I'm Cora. I'd like to have a conversation with you about this result.",
+		"logged_out_greeting": "Hi: I'm Cora. I'd like to have a conversation with you about this result.",
+		"greeting_dialog_display": "show",
+		"ref": surveyValue
+	};
+
 	surveyValue = document.querySelector(".num").innerText;
-	fbChatDiv.setAttribute("ref", surveyValue);
-	console.log(`num: ${surveyValue}`);
+	var fbRoot = document.createElement("div");
+	var fbChatDiv = document.createElement("div");
+	for (var k in attributes) {
+		fbChatDiv.setAttribute(k, attributes[k]);
+	}
+	document.body.insertBefore(fbRoot, document.body.firstChild);
+	document.body.insertBefore(fbChatDiv, fbRoot);
 });
