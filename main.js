@@ -20,5 +20,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	surveyValue = document.querySelector(".num").innerText;
 	fbChatDiv.setAttribute("ref", surveyValue);
 	console.log(`num: ${surveyValue}`);
-
 });
