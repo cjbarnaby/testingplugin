@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	surveyValue = document.querySelector(".num").innerText;
 
 	var attributes = {
+		"class": "fb-customerchat",
 		"attribution": "setup_tool",
 		"page_id": "1779324532358727",
 		"theme_color": "#00d1e9",
