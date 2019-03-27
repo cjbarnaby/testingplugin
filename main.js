@@ -1,11 +1,3 @@
-window.fbAsyncInit = function() {
-	FB.init({
-		xfbml: true,
-		version: 'v3.2'
-	});
-	FB.CustomerChat.showDialog();
-};
-
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
@@ -15,8 +7,16 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+window.fbAsyncInit = function() {
+	FB.init({
+		xfbml: true,
+		version: 'v3.2'
+	});
+	FB.CustomerChat.showDialog();
+};
+
 document.addEventListener("DOMContentLoaded", function() {
-	surveyValue = document.querySelector(".num").innerText;
+	var surveyValue = document.querySelector("#surveyResult").innerText;
 
 	var attributes = {
 		"attribution": "setup_tool",
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var fbRoot = document.createElement("div");
 	fbRoot.setAttribute("id", "fb-root");
+
 	var fbChatDiv = document.createElement("div");
 	for (var k in attributes) {
 		fbChatDiv.setAttribute(k, attributes[k]);
