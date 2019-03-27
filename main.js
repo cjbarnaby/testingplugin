@@ -17,6 +17,7 @@ window.fbAsyncInit = function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	surveyValue = document.querySelector(".num").innerText;
+
 	var attributes = {
 		"attribution": "setup_tool",
 		"page_id": "1779324532358727",
