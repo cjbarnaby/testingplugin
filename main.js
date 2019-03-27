@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	};
 
 	var fbRoot = document.createElement("div");
+	fbRoot.setAttribute("id", "fb-root");
 	var fbChatDiv = document.createElement("div");
 	for (var k in attributes) {
 		fbChatDiv.setAttribute(k, attributes[k]);
