@@ -16,6 +16,7 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 document.addEventListener("DOMContentLoaded", function() {
+	surveyValue = document.querySelector(".num").innerText;
 	var attributes = {
 		"attribution": "setup_tool",
 		"page_id": "1779324532358727",
@@ -26,12 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		"ref": surveyValue
 	};
 
-	surveyValue = document.querySelector(".num").innerText;
 	var fbRoot = document.createElement("div");
 	var fbChatDiv = document.createElement("div");
 	for (var k in attributes) {
 		fbChatDiv.setAttribute(k, attributes[k]);
 	}
+	document.body.insertBefore(fbChatDiv, document.body.firstChild);
 	document.body.insertBefore(fbRoot, document.body.firstChild);
-	document.body.insertBefore(fbChatDiv, fbRoot);
 });
