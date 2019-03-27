@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	surveyValue = document.querySelector(".num").innerText;
 
 	var attributes = {
-		"class": "fb-customerchat",
 		"attribution": "setup_tool",
-		"page_id": "1779324532358727",
-		"theme_color": "#00d1e9",
+		"class": "fb-customerchat",
+		"greeting_dialog_display": "show",
 		"logged_in_greeting": "Hi: I'm Cora. I'd like to have a conversation with you about this result.",
 		"logged_out_greeting": "Hi: I'm Cora. I'd like to have a conversation with you about this result.",
-		"greeting_dialog_display": "show",
-		"ref": surveyValue
+		"page_id": "1779324532358727",
+		"ref": surveyValue,
+		"theme_color": "#00d1e9"
 	};
 
 	var fbRoot = document.createElement("div");
